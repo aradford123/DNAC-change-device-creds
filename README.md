@@ -63,13 +63,13 @@ This is specified with the --password argument.
 Anything after this is considered a list of devices to update.
 ```
 ./change_device_password.py --password sdn123 10.10.21.200 
-changing password for 10.10.21.200:Task completed:Inventory service updating devices - (None) - elapsed time:1sec
+changing password for 10.10.21.200:Task completed:Inventory service updating devices  - elapsed time:1sec
 ```
 
 This example forces an snmpv2 credential
 ```
 ./change_device_password.py --password sdn123 10.10.21.200 --snmpv2
-changing password for 10.10.21.200:Task completed:Inventory service updating devices - (None) - elapsed time:4sec
+changing password for 10.10.21.200:Task completed:Inventory service updating devices  - elapsed time:4sec
 ```
 
 The script will also pick up input errors
