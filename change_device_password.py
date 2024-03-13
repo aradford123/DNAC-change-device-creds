@@ -20,7 +20,8 @@ def change_device(dnac, password, snmpv2, device ):
                             device
                             ],
                 "password": password,
-                "computeDevice": False
+                "computeDevice": False,
+                "netconfPort" : 830
             }
 
     if snmpv2:
