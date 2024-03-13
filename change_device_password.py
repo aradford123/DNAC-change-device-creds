@@ -48,7 +48,10 @@ def change_device(dnac, password, snmpv2, device ):
         if result.response.progress == "Error":
             message = result.response.failureReason
         else:
-            message = f'{result.response.progress} - ({result.response.failureReason})'
+            failure = result.response.get('failureReason','')
+            if failure != '':
+                failure = f' - ({failure})'
+            message = f'{result.response.progress}  {failure}'
         print("Task completed:{} - elapsed time:{}sec".format(message, elapsed))
     except TaskTimeoutError as e:
         print(e)

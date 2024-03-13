@@ -71,3 +71,9 @@ This example forces an snmpv2 credential
 ./change_device_password.py --password sdn123 10.10.21.200 --snmpv2
 changing password for 10.10.21.200:Task completed:Inventory service updating devices - (None) - elapsed time:4sec
 ```
+
+The script will also pick up input errors
+```
+./change_device_password.py --password sdn123 10.10.21.200 
+changing password for 10.10.21.200:Task completed:Inventory service updating devices has failed.   - (snmpAuthPassphrase must be more than 8 characters for SNMP v3) - elapsed time:0sec
+```
